@@ -37,17 +37,17 @@
         </tr>
         <tr>
             <td>
-                <select>
+                <select id="sel">
                     <%
                         MineService mineService = new MineService();
                         List<Kind> kindlist = mineService.getkind();
                         for (Kind kind: kindlist){
                     %>
-                    <option name="kindid" value="<%=kind.getKindid()%>"><%=kind.getKindname()%></option>
+                    <option name="kindidx" value="<%=kind.getKindid()%>" ><%=kind.getKindname()%></option>
                     <%}%>
-                </select>
-<%--                <input type="text" name="kindid" placeholder="商品名称" value="1" class="iput" />--%>
 
+                </select>
+                <input type="hidden" id="ccid" name="kindid" placeholder="商品名称" value="" class="iput" />
             </td>
             <td>
                 <input type="text" name="goodsname" placeholder="商品名称" class="iput" />
@@ -83,5 +83,18 @@
         </tbody>
     </table>
 </form>
+<script>
+    //获取select标签
+    var sel = document.querySelector('#sel')
+    //添加点击事件
+    sel.onclick = function () {
+        //获取option标签的下标
+        var ind = sel.selectedIndex
+        //获取option的value值
+        var val = sel[ind].value
+        // console.log(val)
+        document.getElementById("ccid").value=val;
+    }
+</script>
 </body>
 </html>

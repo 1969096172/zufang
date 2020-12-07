@@ -7,108 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="91d4851c-097f-46e3-b4a9-3b9a2d3988c6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/li/ers/dao/IAdduserDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/li/ers/dao/ILoginDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/li/ers/dao/IMineDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/li/ers/dao/impl/AdduserDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/li/ers/dao/impl/LoginDAOImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/li/ers/dao/impl/MineDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/li/ers/model/Account.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/li/ers/model/Admin.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/li/ers/model/Kind.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/li/ers/model/Orders.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/li/ers/model/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/li/ers/service/AdduserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/li/ers/service/LoginSevice.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/li/ers/service/MineService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/li/ers/servlet/MineServelet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/li/ers/utils/PageBean.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/pages/detail.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/pages/mine.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/pages/mine_fix.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/pages/moneycare.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/pages/release_goods.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/commons/header_mine.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/public/css/footer.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/public/css/header.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/public/css/mine.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/public/img/banner1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/public/img/banner2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/public/img/banner3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/public/js/mine.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Mypr/Mypr.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../OpenBook/OpenBook.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../contact-mobil-20201016/.idea/contact-mobil-20201016.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../contact-mobil/contact-mobile.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../contact-mobile-10-23/.idea/contact-mobile-10-23.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../contact-mobile/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../contact-mobile/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../contact-mobile/contact-mobile.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../contact/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../contact/.idea/artifacts/contact_war_exploded.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../contact/.idea/libraries/jstl.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../contact/.idea/libraries/jxl.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../contact/.idea/libraries/mysql_connector_java_8_0_17.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../contact/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../contact/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../contact/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../contact/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../contact/contact.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../contacts/contacts.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../estore/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../estore/.idea/artifacts/estore_war_exploded.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../estore/.idea/libraries/c3p0_0_9_1_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../estore/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../estore/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../estore/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../estore/estore.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../fengjing/fengjing.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../first/first.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../hotel/hotel.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../hotel/out/artifacts/hotel_war_exploded/WEB-INF/.idea/WEB-INF.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../hotel/web/WEB-INF/.idea/WEB-INF.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../mobile_terminal/mobile_terminal.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../one-r-two/estore.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../photo/.idea/photo.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../teacher1/teacher1.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../web.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/c3p0_0_9_1_21.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/c3p0_0_9_1_21.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Excel_war_exploded/WEB-INF/classes/com/li/ers/dao/HomegoodsDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Excel_war_exploded/WEB-INF/classes/com/li/ers/dao/HomegoodsDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Excel_war_exploded/WEB-INF/classes/com/li/ers/dao/impl/HomegoodsDAOImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Excel_war_exploded/WEB-INF/classes/com/li/ers/dao/impl/HomegoodsDAOImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Excel_war_exploded/WEB-INF/classes/com/li/ers/service/HomeService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Excel_war_exploded/WEB-INF/classes/com/li/ers/service/HomeService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Excel_war_exploded/WEB-INF/classes/com/li/ers/service/impl/IHomeService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Excel_war_exploded/WEB-INF/classes/com/li/ers/servlet/AdduserServelet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Excel_war_exploded/WEB-INF/classes/com/li/ers/servlet/AdduserServelet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Excel_war_exploded/WEB-INF/classes/com/li/ers/servlet/HomeServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Excel_war_exploded/WEB-INF/classes/com/li/ers/servlet/HomeServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Excel_war_exploded/WEB-INF/classes/com/li/ers/servlet/LoginServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Excel_war_exploded/WEB-INF/classes/com/li/ers/servlet/LoginServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Excel_war_exploded/WEB-INF/pages/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Excel_war_exploded/WEB-INF/pages/login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Excel_war_exploded/WEB-INF/pages/secondhandhome.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Excel_war_exploded/WEB-INF/pages/secondhandhome.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Excel_war_exploded/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Excel_war_exploded/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Excel_war_exploded/commons/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Excel_war_exploded/commons/header.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Excel_war_exploded/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Excel_war_exploded/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Excel_war_exploded/public/css/secondhandhome.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Excel_war_exploded/public/css/secondhandhome.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Excel/com/li/ers/dao/HomegoodsDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Excel/com/li/ers/dao/HomegoodsDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Excel/com/li/ers/dao/impl/HomegoodsDAOImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Excel/com/li/ers/dao/impl/HomegoodsDAOImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Excel/com/li/ers/service/HomeService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Excel/com/li/ers/service/HomeService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Excel/com/li/ers/service/impl/IHomeService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Excel/com/li/ers/servlet/AdduserServelet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Excel/com/li/ers/servlet/AdduserServelet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Excel/com/li/ers/servlet/HomeServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Excel/com/li/ers/servlet/HomeServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Excel/com/li/ers/servlet/LoginServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Excel/com/li/ers/servlet/LoginServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/li/ers/dao/HomegoodsDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/li/ers/dao/HomegoodsDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/li/ers/dao/impl/HomegoodsDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/li/ers/dao/impl/HomegoodsDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/li/ers/service/HomeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/li/ers/service/HomeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/li/ers/service/impl/IHomeService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/li/ers/servlet/AdduserServelet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/li/ers/servlet/AdduserServelet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/li/ers/servlet/HomeServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/li/ers/servlet/HomeServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/li/ers/servlet/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/li/ers/servlet/LoginServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/pages/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/pages/login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/pages/secondhandhome.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/pages/secondhandhome.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/commons/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/commons/header.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/public/css/secondhandhome.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/public/css/secondhandhome.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/pages/release_goods.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/pages/release_goods.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -252,6 +152,11 @@
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="Tomcat Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
               </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Tomcat Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="Running" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
             </expand>
             <select />
           </treeState>
@@ -288,12 +193,24 @@
       <workItem from="1607084673111" duration="7155000" />
       <workItem from="1607160545535" duration="18553000" />
       <workItem from="1607247759860" duration="1927000" />
-      <workItem from="1607301382731" duration="261000" />
+      <workItem from="1607301382731" duration="3175000" />
     </task>
+    <task id="LOCAL-00001" summary="xmu">
+      <created>1607301923110</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1607301923110</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="xmu" />
+    <option name="LAST_COMMIT_MESSAGE" value="xmu" />
   </component>
   <component name="WindowStateProjectService">
     <state x="524" y="46" key="#com.intellij.ide.util.MemberChooser" timestamp="1607175711480">
@@ -308,86 +225,94 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="352" y="235" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1366.728@0.0.1366.728" timestamp="1606293538925" />
+    <state x="269" y="0" key="CommitChangelistDialog2" timestamp="1607301921238">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="269" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1607301921238" />
     <state x="506" y="128" key="FileChooserDialogImpl" timestamp="1607268616058">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="506" y="128" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1607268616057" />
-    <state width="863" height="282" key="GridCell.Tab.0.bottom" timestamp="1607179602640">
+    <state width="863" height="220" key="GridCell.Tab.0.bottom" timestamp="1607304001994">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="863" height="282" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1607179602640" />
-    <state width="863" height="282" key="GridCell.Tab.0.center" timestamp="1607179602635">
+    <state width="863" height="220" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1607304001994" />
+    <state width="863" height="220" key="GridCell.Tab.0.center" timestamp="1607304001994">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="863" height="282" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1607179602635" />
-    <state width="863" height="282" key="GridCell.Tab.0.left" timestamp="1607179602630">
+    <state width="863" height="220" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1607304001994" />
+    <state width="863" height="220" key="GridCell.Tab.0.left" timestamp="1607304001994">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="863" height="282" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1607179602630" />
-    <state width="863" height="282" key="GridCell.Tab.0.right" timestamp="1607179602638">
+    <state width="863" height="220" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1607304001994" />
+    <state width="863" height="220" key="GridCell.Tab.0.right" timestamp="1607304001994">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="863" height="282" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1607179602638" />
-    <state width="863" height="282" key="GridCell.Tab.1.bottom" timestamp="1607179602447">
+    <state width="863" height="220" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1607304001994" />
+    <state width="863" height="220" key="GridCell.Tab.1.bottom" timestamp="1607304001994">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="863" height="282" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1607179602447" />
-    <state width="863" height="282" key="GridCell.Tab.1.center" timestamp="1607179602447">
+    <state width="863" height="220" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1607304001994" />
+    <state width="863" height="220" key="GridCell.Tab.1.center" timestamp="1607304001994">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="863" height="282" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1607179602447" />
-    <state width="863" height="282" key="GridCell.Tab.1.left" timestamp="1607179602447">
+    <state width="863" height="220" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1607304001994" />
+    <state width="863" height="220" key="GridCell.Tab.1.left" timestamp="1607304001994">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="863" height="282" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1607179602447" />
-    <state width="863" height="282" key="GridCell.Tab.1.right" timestamp="1607179602447">
+    <state width="863" height="220" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1607304001994" />
+    <state width="863" height="220" key="GridCell.Tab.1.right" timestamp="1607304001994">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="863" height="282" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1607179602447" />
-    <state width="863" height="282" key="GridCell.Tab.2.bottom" timestamp="1607179602447">
+    <state width="863" height="220" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1607304001994" />
+    <state width="863" height="220" key="GridCell.Tab.2.bottom" timestamp="1607304001994">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="863" height="282" key="GridCell.Tab.2.bottom/0.0.1366.728@0.0.1366.728" timestamp="1607179602447" />
-    <state width="863" height="282" key="GridCell.Tab.2.center" timestamp="1607179602447">
+    <state width="863" height="220" key="GridCell.Tab.2.bottom/0.0.1366.728@0.0.1366.728" timestamp="1607304001994" />
+    <state width="863" height="220" key="GridCell.Tab.2.center" timestamp="1607304001994">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="863" height="282" key="GridCell.Tab.2.center/0.0.1366.728@0.0.1366.728" timestamp="1607179602447" />
-    <state width="863" height="282" key="GridCell.Tab.2.left" timestamp="1607179602447">
+    <state width="863" height="220" key="GridCell.Tab.2.center/0.0.1366.728@0.0.1366.728" timestamp="1607304001994" />
+    <state width="863" height="220" key="GridCell.Tab.2.left" timestamp="1607304001994">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="863" height="282" key="GridCell.Tab.2.left/0.0.1366.728@0.0.1366.728" timestamp="1607179602447" />
-    <state width="863" height="282" key="GridCell.Tab.2.right" timestamp="1607179602447">
+    <state width="863" height="220" key="GridCell.Tab.2.left/0.0.1366.728@0.0.1366.728" timestamp="1607304001994" />
+    <state width="863" height="220" key="GridCell.Tab.2.right" timestamp="1607304001994">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="863" height="282" key="GridCell.Tab.2.right/0.0.1366.728@0.0.1366.728" timestamp="1607179602447" />
-    <state width="863" height="282" key="GridCell.Tab.3.bottom" timestamp="1607178869801">
+    <state width="863" height="220" key="GridCell.Tab.2.right/0.0.1366.728@0.0.1366.728" timestamp="1607304001994" />
+    <state width="863" height="220" key="GridCell.Tab.3.bottom" timestamp="1607303781491">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="863" height="282" key="GridCell.Tab.3.bottom/0.0.1366.728@0.0.1366.728" timestamp="1607178869801" />
-    <state width="863" height="282" key="GridCell.Tab.3.center" timestamp="1607178869801">
+    <state width="863" height="220" key="GridCell.Tab.3.bottom/0.0.1366.728@0.0.1366.728" timestamp="1607303781491" />
+    <state width="863" height="220" key="GridCell.Tab.3.center" timestamp="1607303781490">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="863" height="282" key="GridCell.Tab.3.center/0.0.1366.728@0.0.1366.728" timestamp="1607178869801" />
-    <state width="863" height="282" key="GridCell.Tab.3.left" timestamp="1607178869801">
+    <state width="863" height="220" key="GridCell.Tab.3.center/0.0.1366.728@0.0.1366.728" timestamp="1607303781490" />
+    <state width="863" height="220" key="GridCell.Tab.3.left" timestamp="1607303781490">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="863" height="282" key="GridCell.Tab.3.left/0.0.1366.728@0.0.1366.728" timestamp="1607178869801" />
-    <state width="863" height="282" key="GridCell.Tab.3.right" timestamp="1607178869801">
+    <state width="863" height="220" key="GridCell.Tab.3.left/0.0.1366.728@0.0.1366.728" timestamp="1607303781490" />
+    <state width="863" height="220" key="GridCell.Tab.3.right" timestamp="1607303781491">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="863" height="282" key="GridCell.Tab.3.right/0.0.1366.728@0.0.1366.728" timestamp="1607178869801" />
+    <state width="863" height="220" key="GridCell.Tab.3.right/0.0.1366.728@0.0.1366.728" timestamp="1607303781491" />
     <state x="264" y="0" key="SettingsEditor" timestamp="1607044154343">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="264" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1607044154343" />
-    <state x="238" y="73" key="Vcs.Push.Dialog.v2" timestamp="1607301773301">
+    <state x="238" y="73" key="Vcs.Push.Dialog.v2" timestamp="1607301945447">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="238" y="73" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1607301773301" />
+    <state x="238" y="73" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1607301945447" />
     <state x="357" y="186" key="com.intellij.ide.util.TipDialog" timestamp="1607301383154">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="357" y="186" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1607301383154" />
+    <state x="85" y="239" key="git4idea.merge.GitPullDialog" timestamp="1607304202309">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="85" y="239" key="git4idea.merge.GitPullDialog/0.0.1366.728@0.0.1366.728" timestamp="1607304202309" />
     <state x="374" y="59" width="672" height="678" key="search.everywhere.popup" timestamp="1607086052728">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
