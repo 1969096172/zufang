@@ -58,7 +58,7 @@
             </div>
             <div class="menu_choic_money">
                 <h3>商品管理</h3>
-                <p><a style="color: rgb(0, 233, 233);" href="" target="minenav">点击管理</a> </p>
+                <p><a style="color: rgb(0, 233, 233);" href="${pageContext.request.contextPath}/mineServelet?method=setminerelgoods&userid=${sessionScope['userS'].userid}" target="minenav">点击管理</a> </p>
             </div>
             <div class="menu_choic_money">
                 <h3>发布商品</h3>
@@ -75,7 +75,7 @@
 <div id="content">
     <div id="order">
         <div id="order_content_img">
-            <iframe src="${pageContext.request.contextPath}moneycare.jsp" name="minenav" frameborder="0"width="100%" height="70%" scrolling="yes"></iframe>
+            <iframe src="${pageContext.request.contextPath}/mineServelet?method=setminerelgoods&userid=${sessionScope['userS'].userid}" name="minenav" frameborder="0"width="100%" height="70%" scrolling="yes"></iframe>
         </div>
     </div>
     <div id="care">

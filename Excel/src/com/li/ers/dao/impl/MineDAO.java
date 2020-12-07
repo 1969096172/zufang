@@ -126,4 +126,43 @@ public class MineDAO implements IMineDAO {
         return null;
     }
 
+    @Override
+    public List<Goods> goods0(String sql, int userid) {
+        Connection connection = null;
+        PreparedStatement preparedStatement = null;
+        Statement statement = null;
+        ResultSet resultSet = null;
+        try {
+            connection = DBershou.getConnection();
+            statement = connection.createStatement();
+            resultSet = statement.executeQuery(sql);
+            List<Goods> goods0L = new ArrayList<>();
+            while (resultSet.next()){
+                Goods goods0 = new Goods();
+                goods0.setGoodsid(resultSet.getInt("goodsid"));
+                goods0.setGoodsname(resultSet.getString("goodsname"));
+                goods0.setNewprice(resultSet.getDouble("newprice"));
+                goods0.setOldprice(resultSet.getDouble("oldprice"));
+                goods0.setNewkind(resultSet.getString("newkind"));
+                goods0.setStatus(resultSet.getInt("status"));
+                goods0.setGoodurl(resultSet.getString("goodurl"));
+                goods0.setBrand(resultSet.getString("brand"));
+                goods0.setRemark(resultSet.getString("remark"));
+                goods0.setKindid(resultSet.getInt("kindid"));
+                goods0.setAdminid(resultSet.getInt("adminid"));
+                goods0.setUserid(resultSet.getInt("userid"));
+                goods0L.add(goods0);
+            }
+            resultSet.close();
+            statement.close();
+            connection.close();
+            return goods0L;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }finally {
+            DBershou.release(connection);
+        }
+        return null;
+    }
+
 }

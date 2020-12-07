@@ -245,4 +245,22 @@ public class MineServelet extends HttpServlet {
 
     }
 
+    /**
+     * 管理商品
+     * @param request
+     * @param response
+     * @throws ServletException
+     * @throws IOException
+     */
+    protected void setminerelgoods(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+        int userid = Integer.parseInt(request.getParameter("userid"));
+
+        List<Goods> goods0 = mineService.getgoods0(userid);
+
+        HttpSession session = request.getSession();  //通过request获取session
+        session.setAttribute("userre",userid);
+        session.setAttribute("goods0",goods0);
+        request.getRequestDispatcher("/WEB-INF/pages/adgoods.jsp").forward(request, response);
+    }
 }

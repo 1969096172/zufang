@@ -16,4 +16,6 @@ public interface IMineDAO {
     int addgoods(String sql, Goods goods);
 
     List<Kind> getkind(String sql);
+
+    List<Goods> goods0(String sql, int userid);
 }

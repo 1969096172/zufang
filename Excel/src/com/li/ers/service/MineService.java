@@ -34,4 +34,10 @@ public class MineService {
         List<Kind> kind = mineDAO.getkind(sql);
         return kind;
     }
+
+    public List<Goods> getgoods0(int userid) {
+        String sql = "select * from goods where status = 0";
+        List<Goods> goods0 = mineDAO.goods0(sql, userid);
+        return goods0;
+    }
 }
