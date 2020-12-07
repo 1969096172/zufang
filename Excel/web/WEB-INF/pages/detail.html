@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>详情页</title>
+		<link rel="stylesheet" href="css/index.css">
+	</head>
+	<body>
+		<div id="main">
+		    <div id="main-content">
+		        <div class="nav-head">
+		            <ul>
+		              
+		                 <div id="nowdate">
+		                            <label id="nnowdate">2020/6/29 下午2:48:53 星期一</label>
+		                            <script>
+		                                setInterval("nnowdate.innerHTML=new Date().toLocaleString()+' 星期'+'日一二三四五六'.charAt(new Date().getDay());",1000);
+		                            </script>
+		                  </div>
+		            </ul>
+		        </div>
+				<div class="second-trading">二手交易平台</div>
+		        <div class="nav-end">
+		            <ul>
+						<li>首页</li>
+		                <li>登录</li>
+		                <li>注册</li>
+		                <li><a href="mine.html">个人中心</a></li>
+		                <li>关于</li>
+		            </ul>
+		        </div>
+		    </div>
+		</div>
+		<center>
+				<div class="thumbnail">
+					<img src="img/小米商城_files/cup.jpg" style="width:200px;height:200px;"/>
+				</div>
+				<div class="caption">
+				<br><br>
+				品牌：小米
+				<br><br>
+				原价: ￥ 400
+				<br><br>
+				现价: ￥200
+				<br><br>
+				购买时间: 2020.07.01
+				<br><br>
+				几成新: 8成新
+				<br><br>
+				<a href="index.html" class="btn btn-default">继续购物</a>
+				<a href="#" class="btn btn-primary addToCart" role="button"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> 加入购物车</a> 
+				</div>
+			</center>
+		<div id="on_footer">
+				<div style="width: 100%; clear: both;"></div>
+			<footer>
+				<p>© <a>mi.com</a> 京ICP证110507号 <a>京ICP备10046444号</a> <a>京公网安备11010802020134号</a> <a>京网文[2020]0276-042号</a></p>
+			</footer>
+		</div>
+	</body>
+</html>

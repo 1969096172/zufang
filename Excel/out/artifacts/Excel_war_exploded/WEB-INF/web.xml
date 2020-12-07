@@ -32,12 +32,12 @@
     </servlet-mapping>
     <servlet>
         <description></description>
-        <display-name>AdduserServelet</display-name>
-        <servlet-name>AdduserServelet</servlet-name>
-        <servlet-class>com.li.ers.servlet.AdduserServelet</servlet-class>
+        <display-name>MineServelet</display-name>
+        <servlet-name>MineServelet</servlet-name>
+        <servlet-class>com.li.ers.servlet.MineServelet</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>AdduserServelet</servlet-name>
-        <url-pattern>/adduserServelet</url-pattern>
+        <servlet-name>MineServelet</servlet-name>
+        <url-pattern>/mineServelet</url-pattern>
     </servlet-mapping>
 </web-app>

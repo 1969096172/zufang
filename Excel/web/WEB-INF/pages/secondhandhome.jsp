@@ -18,6 +18,13 @@
 
 </head>
 <body>
+<c:if test="${sessionScope['userid'] ne null}">
+    <%
+        int userid = (int) session.getAttribute("userid");
+        System.out.println(userid);
+    %>
+
+</c:if>
 <%@ include file="/commons/header.jsp" %>
 <div id="container">
     <a href="#"><div class="logo"></div></a>
@@ -60,5 +67,7 @@
 </div>
 <%@ include file="/commons/footer.jsp" %>
 <script type="text/javascript" src="<%=jsUrl%>secondhandhome.js"></script>
+<!-- vue开发环境版本，包含了有帮助的命令警告 -->
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 </body>
 </html>

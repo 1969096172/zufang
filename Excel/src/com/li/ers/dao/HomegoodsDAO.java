@@ -1,6 +1,7 @@
 package com.li.ers.dao;
 
 import com.li.ers.model.Goods;
+import com.li.ers.model.User;
 import com.li.ers.web.CriteriaComputer;
 import com.li.ers.web.Page;
 
@@ -11,10 +12,12 @@ public interface HomegoodsDAO {
      *
      * @return
      */
-    public abstract Page<Goods> getPage(CriteriaComputer cc);
+    Page<Goods> getPage(CriteriaComputer cc);
 
-    public abstract long getTotalComputerNumber(CriteriaComputer cc);
+    long getTotalComputerNumber(CriteriaComputer cc);
 
-    public abstract List<Goods> getPageList(CriteriaComputer cc, int pageSize);
+    List<Goods> getPageList(CriteriaComputer cc, int pageSize);
+
+    User getmine(String sql,int userid);
 
 }

@@ -1,5 +1,8 @@
 package com.li.ers.servlet;
 
+import com.li.ers.model.User;
+import com.li.ers.service.HomeService;
+import com.li.ers.service.LoginSevice;
 import javafx.application.Application;
 import javafx.stage.Stage;
 
@@ -7,11 +10,12 @@ import javax.servlet.*;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.lang.reflect.Method;
 
 public class LoginServlet extends HttpServlet {
-
+    private LoginSevice loginService = new LoginSevice();
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         doPost(request, response);
     }
@@ -19,7 +23,6 @@ public class LoginServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException,IOException{
         String methodName = request.getParameter("method");
-
         try{
             //利用反射获取方法
             Method method = getClass().getDeclaredMethod(methodName, HttpServletRequest.class,HttpServletResponse.class);
@@ -38,9 +41,14 @@ public class LoginServlet extends HttpServlet {
         request.getRequestDispatcher("/WEB-INF/pages/login.jsp").forward(request, response);
     }
 
-    protected void adduser(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void login_in(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        System.out.println("11");
+        String useraccount = request.getParameter("username");
+        String userpassword = request.getParameter("userpassword");
+        int userid = loginService.login_in(useraccount,userpassword);
+        HttpSession session = request.getSession();  //通过request获取session
+        session.setAttribute("userid",userid);
+        response.sendRedirect("index.jsp");
     }
 
 

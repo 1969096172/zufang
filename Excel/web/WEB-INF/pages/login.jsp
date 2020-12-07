@@ -18,10 +18,10 @@
 <body>
 <div class="container" id="container">
     <div class="form-container sign-up-container">
-        <form action="servlet/loginServlet?method=adduser" method="post">
+        <form action="AdduserServelet" method="post" enctype="multipart/form-data">
             <h1>注 册</h1>
-            <span>选择以上方式登录或者使用您的账号</span>
-
+            <span>上传头像</span>
+            <input type="file" name="userurl">
             <input type="text" name="username" placeholder="账户"  />
             <input type="password" name="userpassword" placeholder="密码"  />
             <input type="text" name="usertel" placeholder="电话"  />
@@ -30,15 +30,15 @@
         </form>
     </div>
     <div class="form-container sign-in-container">
-        <form id="login" name="login" method="post" action="">
+        <form id="login" name="login" method="post" action="${pageContext.request.contextPath }/loginServlet?method=login_in">
             <h1>登 录</h1>
 
             <span>选择以上方式登录或者使用您的账号</span>
-            <input type="text" name="user" placeholder="账户"  />
-            <input type="password" name="pass" placeholder="密码"  />
+            <input type="text" name="username" placeholder="账户"  />
+            <input type="password" name="userpassword" placeholder="密码"  />
             <a href="#">忘记密码？</a>
             <!-- 使用js获取表单数据 -->
-            <button  name="submit" value="submit" onclick="getFormInfo();">登 录</button>
+            <button  name="submit" value="submit">登 录</button>
         </form>
     </div>
     <div class="overlay-container">

@@ -1,0 +1,534 @@
+*{padding: 0; margin: 0;}
+body{
+    background-color: rgb(250, 237, 249);
+    min-width: 1300px;
+}
+a{
+    text-decoration: none; 
+    color: #000;
+}
+header .nav{
+    height: 40px;
+    width: 100%; 
+    background-color: #333333;
+	color: #b0b0b0;
+	margin:  0 auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+header .nav .nav-head{
+	font-size: 13px;
+}
+header .nav .nav-head #nnowdate{
+	margin-top: 10px;
+}
+/* 设置导航栏ul标签的右外边距 */
+header .nav ul{
+    margin-right: 100px;
+    z-index: 2;
+}
+
+header .nav ul li{
+/* 使li标签拥有行内标签元素共享一行 */
+    display: inline; 
+/* 右边线大小颜色 */
+    /* border-right: solid 1px rgb(255, 177, 232); */
+/* 右浮动 */
+    float: right;
+/* 行高 */
+    line-height: 21px; 
+    padding: 0 5px;
+}
+/* li标签第一个的右边线取消 */
+header .nav ul li:nth-child(1){border-right: none;}
+/* li标签第二个设定为父辈方便下拉菜单的设置 */
+header .nav ul li:nth-child(2){position: relative;}
+/* 导航栏中a标签颜色字号 */
+header .nav ul li a{color:#b0b0b0;; font-size: 13px;}
+header .nav .second-trading{
+	color: #B0B0B0;
+	font-size: 13px;
+}
+
+header .nav .nav_u .nav_u_u{
+/* 下拉菜单隐藏 */
+    display: none;
+/* 设置为子辈 */
+    position: absolute;
+/* 背景颜色 */
+    background-color: #fff;
+/* 宽度 */
+    width: 70px;
+/* 位置 */
+    top: 23px;
+    left: -4px;
+/* 边框圆滑度 */
+    border-radius: 10px;
+}
+/* 取消下拉菜单的li标签的边框 */
+header .nav .nav_u .nav_u_u li{border: none;}
+/* 鼠标移动到header中li标签时相应a标签下划线出现，字体颜色变红 */
+header ul li:hover a{
+    color: #ffffff;
+    text-decoration: none;
+}
+/* 包裹个人信息div */
+#contenter{
+    position: relative; 
+    margin-top: 50px; 
+    background-color: #fff;
+    width: 70%;
+    height: 400px;
+    border-radius: 10px;
+    border: solid 2px #ddd;
+}
+/* 包裹账户照片名字 */
+#contenter #photo{
+    position: absolute;
+    margin-top: 100px; 
+    left: 50px; 
+    background-color: rgb(172, 172, 172);
+    width: 150px;
+    height: 200px;
+    border-radius: 10px;
+}
+/* 包裹月精灵图div */
+#contenter .img1{
+    position: absolute;
+    top: 13.2%;
+    left: 15%;
+}
+#contenter .img2{
+    position: absolute;
+    top: 53.5%;
+    left: 22%;
+    z-index: 2;
+}
+/* 方块 */
+#contenter .lianjie11{
+    position: absolute;
+    width: 110px;
+    height: 30px;
+    background-color: rgb(172, 172, 172);
+    top: 30%;
+    left: 21%;
+}
+/* 方块 */
+#contenter .lianjie1{
+    position: absolute;
+    width: 110px;
+    height: 30px;
+    background-color: rgb(172, 172, 172);
+    top: 64%;
+    left: 21%;
+}
+/* 方块 */
+#contenter .lianjie0{
+    position: absolute;
+    width: 40px;
+    height: 80px;
+    background-color: rgb(172, 172, 172);
+    top: 40%;
+    left: 96.5%;
+}
+/* 方块 */
+#contenter .lianjie2{
+    position: absolute;
+    width: 40px;
+    height: 80px;
+    background-color: rgb(175, 175, 175);
+    top: 40%;
+    left: 100%;
+}
+/* 方块 */
+#contenter .lianjie3{
+    position: absolute;
+    width: 45px;
+    height: 90px;
+    background-color: rgb(192, 192, 192);
+    top: 39%;
+    left: 103%;
+}
+/* 方块 */
+#contenter .lianjie4{
+    position: absolute;
+    width: 50px;
+    height: 100px;
+    background-color: rgb(214, 213, 213);
+    top: 38%;
+    left: 106%;
+}
+/* 方块 */
+#contenter .lianjie5{
+    position: absolute;
+    width: 60px;
+    height: 110px;
+    background-color: rgb(221, 220, 220);
+    top: 37%;
+    left: 110%;
+}
+/* 方块 */
+#contenter .lianjie6{
+    position: absolute;
+    width: 75px;
+    height: 125px;
+    background-color: rgb(230, 230, 230);
+    top: 35%;
+    left: 114%;
+}
+/* 方块 */
+#contenter .lianjie7{
+    position: absolute;
+    width: 25px;
+    height: 65px;
+    background-color: rgb(255, 255, 255);
+    top: 95%;
+    left: 45%;
+}
+/* 方块 */
+#contenter .lianjie8{
+    position: absolute;
+    width: 25px;
+    height: 65px;
+    background-color: rgb(255, 255, 255);
+    top: 95%;
+    left: 65%;
+}
+#contenter .lianjie9{
+    position: absolute;
+    width: 25px;
+    height: 65px;
+    background-color: rgb(255, 255, 255);
+    top: 95%;
+    left: 85%;
+}
+/* 个人菜单 */
+#contenter #menu{
+    left:280px;
+    top:20px;
+    position: absolute;
+    width: 70%;
+    height: 360px; 
+    background-color: rgb(175, 175, 175);
+    position: relative;
+    border-radius: 10px;
+}
+/* 个人菜单中的包裹显示的div */
+#contenter #menu #menu_choic{
+    position: absolute;
+    width: 90%;
+    height: 90%;
+    background-color: #f0f0f0;
+    top: 5%;
+    left: 5%;
+}
+/* 个人菜单中的显示div */
+#contenter #menu #menu_choic .menu_choic_money{
+    width: 90px;
+    height: 250px;
+    background-color: rgb(255, 255, 255);
+    margin: 0 15px;
+    float: left;
+    text-align: center;
+}
+#contenter #menu #menu_choic .menu_choic_money h3{
+    margin-top: 85px;
+    color: rgb(255, 0, 0);
+    /* 字体 */
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+#contenter #menu #menu_choic .menu_choic_money p{
+    margin-top: 30px;
+    color: rgb(153, 152, 152);
+    font-size: 13px;
+}
+#contenter #menu #menu_choic .menu_choic_money p a{
+    color: rgb(153, 152, 152);
+    font-size: 13px;
+}
+#contenter #menu #menu_choic .menu_choic_money p a:hover{
+     text-decoration: underline;
+}
+
+#contenter #photo #photo_text{text-align: center;}
+/* 选择栏 */
+#contenter #choic{
+    position: absolute; 
+    background-color: rgb(253, 253, 253);
+    width: 150px;
+    height: 350px; 
+    left: 120%;
+    top: 5%;
+    border-radius: 20px;
+}
+#contenter #choic div{
+    float: right;
+    width: 150px;
+    height: 50px;
+    margin: 8px auto;
+    text-align: center;
+    line-height: 50px;
+    z-index: 2;
+}
+#contenter #choic div a{
+    color: rgb(136, 136, 136);
+}
+#contenter #choic:hover div{
+    display: block;
+}
+#contenter #choic div a:hover{
+    text-decoration: underline;
+    color: rgb(255, 0, 0);
+}
+#content{
+    background-color: #ffffff;
+    width: 80%;
+    height: 500px;
+    margin: 40px auto;
+    border-radius: 10px;
+    border: solid 2px #ddd;
+    display: flex;
+}
+/* 订单 */
+#content #order{
+    float: left;
+    width: 65%;
+    border-bottom: solid 1px #ddd;
+    border-left: solid 1px #ddd;
+    border-right: solid 1px #ddd;
+    margin: 0px 20px;
+    padding-top: 30px;
+    flex: 0.65;
+}
+#content #order h3{
+    
+    width: 97.7%;
+    background-color: #ddd;
+    padding: 15px 8px;
+    color: #fff;
+}
+/* 订单图片容器 */
+#content #order #order_skills ul{
+    width: 400px;
+    height: 50px;
+    margin-top: 20px;
+    list-style-type: none;
+    position: relative;
+}
+
+#content #order #order_skills ul li:nth-child(1){
+    left: 20px;
+}
+#content #order #order_skills ul li:nth-child(2){
+    left: 140px;
+    background-position: 0px -100px;
+}
+#content #order #order_skills ul li:nth-child(3){
+    left: 260px;
+    background-position: 0px -200px;
+}
+#content #order #order_skills ul li:nth-child(4){
+    left: 380px;
+    background-position: 0px -300px;
+}
+/* hover事变图片红 */
+#content #order #order_skills ul li:nth-child(1):hover{
+    background-position: 0px -50px;
+}
+#content #order #order_skills ul li:nth-child(2):hover{
+    background-position: 0px -150px;
+}
+#content #order #order_skills ul li:nth-child(3):hover{
+    background-position: 0px -250px;
+}
+#content #order #order_skills ul li:nth-child(4):hover{
+    background-position: 0px -350px;
+}
+#content #order #order_content{
+    width: 100%;
+    height: 330px;
+    background-position: 400px;
+}
+#content #order #order_content ul{
+    list-style: none;
+    padding-top: 20px;
+}
+#content #order #order_content ul li{
+    display: inline;
+    margin: 31px;
+}
+/* 空物品图 */
+#content #order #order_content #order_content_img img{
+    margin-top: 25px;
+    margin-left: 50px;
+    float: left;
+}
+#content #order #order_content #order_content_img h4{
+    color: #ddd;
+    margin-top: 160px;
+    float: left;
+}
+/* 我的关注 */
+#content #care{
+    width: 10%;
+    flex: 0.35;
+    display: flex;
+    flex-direction:column;
+}
+
+#content #care #care_pro{
+    border: solid 1px #ddd;
+    height: 200px;
+    margin: 25px 0px;
+    margin-right: 30px;
+    border-radius: 20px;
+    text-align: center;
+    background-color: lavenderblush;
+    flex: 1;
+}
+#content #care #care_pro h3{
+    width: 100%;
+    border-bottom: solid 1px #ddd;
+    padding: 10px 0px;
+    background: linear-gradient(rgb(82,162,253),rgb(108, 82, 253));
+    color: #FFF0F5;  
+}
+#content #care #care_pro .care_text{
+    padding: 4px 0;
+    font-size: 14px;
+    color: rgb(66, 66, 66);
+}
+#content #care #care_pro .care_text p{
+    color:rgb(252, 252, 252);
+}
+/* 轮播 */
+#content #care #care_banner{
+    margin-right: 50px;
+    flex: 1;
+    border: solid 1px #ddd;
+    position: relative;
+}
+#content #care #care_banner .box_poto{
+    list-style: none;
+    width: 700px;
+}
+#content #care #care_banner .num{
+    list-style: none;
+
+}
+#content #care #care_banner .box_poto li{
+    float:left;
+}
+#content #care #care_banner .box_poto li img{
+    width: 144px;
+    height: 144px;
+    float: left;
+}
+#content #care #care_banner .banner_box{
+    width: 144px;
+    height: 144px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+#content #care #care_banner .btn{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    font-size: 50px;
+    z-index: 10;
+    cursor: pointer;
+}
+#content #care #care_banner .btn_1{
+    top: 20%;
+    left: 0px;
+
+}
+#content #care #care_banner .btn_r{
+    top: 20%;
+    left: 88%;
+}
+footer{
+    clear: both;
+    width: 100%;
+    height: 90px;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    line-height: 30px;
+}
+footer h6{color: #555;}
+ /* 取消buttom原始边框样式，并把鼠标指针设置为销售形状 */
+ .button-delete{
+    background: none;
+}
+button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.show {
+    width: 0;
+    height: 0;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 2px 2px #FAEDF9;
+    background-color: #ffffff;
+    border-radius: 2px;
+    transition: 0.5s;
+    overflow: hidden;
+    z-index: 10;
+}
+.showStyle {
+    width: 300px;
+    height: 150px;
+    opacity: 1;
+}
+.show p {
+    font-size: 20px;
+    text-indent: 1.5rem;
+    margin-top: -100px;
+    transition: 0.5s;
+}
+
+.selectBox {
+    width: 100%;
+    text-align: right;
+    position: absolute;
+    bottom: 15px;
+    /* 隐藏掉包裹着确认和取消按钮的盒子 */
+    visibility: hidden;
+    transition: 0.5s;
+    transform: translateX(50%);
+    
+}
+
+.selectBox .button-sure {
+    color: #ecf0f1;
+    background-color: #ff6348;
+}
+
+.selectBox .button-sure
+{
+    width: 45px;
+    margin: 0 10px;
+    border-radius: 5px;
+    transition:0.5s;
+    box-shadow: 0 0 1px 1px #7f8fa6;
+    z-index: 2;
+}
+
+.selectBox .button-sure:hover{
+    width: 60px;
+}
+.selectBox .button-sure:hover {
+    background-color: #ff3f34;
+}
+#photo #div_photo{
+    background-color: #ffffff;
+    width: 50px;
+    height: 50px;
+}

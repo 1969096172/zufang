@@ -6,6 +6,8 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
+
 <div id="main">
     <div id="main-content">
         <div class="nav-head">
@@ -20,10 +22,20 @@
             </ul>
         </div>
 
-        <div class="nav-end">
+
         <div class="nav-end">
             <ul>
-                <li><a href="loginServlet?method=getlogin" style="color: #B0B0B0">登录/注册</a></li>
+                    <c:if test="${sessionScope['userid'] ne null}">
+                        <%
+                            int userid = (int) session.getAttribute("userid");
+
+                        %>
+                        <li><a href="homeServlet?method=getmine&useridS=<%=userid%>" style="color: #B0B0B0">个人中心</a></li>
+                    </c:if>
+                    <c:if test="${sessionScope['userid'] eq null}">
+                        <li><a href="loginServlet?method=getlogin" style="color: #B0B0B0">登录/注册</a></li>
+                    </c:if>
+
                 <li>帮助</li>
                 <li>关于</li>
             </ul>
