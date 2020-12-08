@@ -52,8 +52,8 @@
                 <p><a href="${pageContext.request.contextPath}/mineServelet?method=getminemoney&userid=${sessionScope['userS'].userid}" target="minenav">点击绑卡</a></p>
             </div>
             <div class="menu_choic_money">
-                <h3>购物车</h3>
-                <p><a href="" target="minenav">点击查看</a></p>
+                <h3>订单</h3>
+                <p><a href="${pageContext.request.contextPath}/orderServelet?method=ordergoods&userid=${sessionScope['userS'].userid}" target="minenav">点击查看</a></p>
             </div>
             <div class="menu_choic_money">
                 <h3>商品管理</h3>

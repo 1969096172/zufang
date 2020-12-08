@@ -40,4 +40,14 @@
         <servlet-name>MineServelet</servlet-name>
         <url-pattern>/mineServelet</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <description></description>
+        <display-name>OrderServelet</display-name>
+        <servlet-name>OrderServelet</servlet-name>
+        <servlet-class>com.li.ers.servlet.OrderServelet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>OrderServelet</servlet-name>
+        <url-pattern>/orderServelet</url-pattern>
+    </servlet-mapping>
 </web-app>
