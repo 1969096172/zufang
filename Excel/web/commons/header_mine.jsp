@@ -27,7 +27,7 @@
         <div class="nav-end">
             <ul>
                 <c:if test="${sessionScope['userS'] ne null}">
-                    <li>当前用户:${sessionScope['userS'].username}</li>\
+                    <li>当前用户:${sessionScope['userS'].username}</li>
                     <li><a href="loginServlet?method=logout" style="color: #B0B0B0">退出</a></li>
                 </c:if>
                 <c:if test="${sessionScope['userS'] eq null}">

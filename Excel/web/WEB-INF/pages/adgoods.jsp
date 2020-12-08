@@ -10,6 +10,11 @@
 <html>
 <head>
     <title>Title</title>
+    <style>
+        .atcolor{
+            color: aqua;
+        }
+    </style>
 </head>
 <body>
 <h3 style="text-align: center; color: #555555">发布商品</h3>
@@ -18,7 +23,7 @@
     <div style="float: left; margin: 10px">
         <img src="${goods0.goodurl}" alt="#" style="width: 50px; height: 50px;">
         <p style="font-size: 13px; text-align: center; color: #bfbfbf">${goods0.goodsname}</p>
-        <a href="mineServelet?method=deletegoods&deleteid=${goods0.goodsid}&userid=${sessionScope['userre']}">删除</a>
+        <a class="atcolor" href="mineServelet?method=deletegoods&deleteid=${goods0.goodsid}&userid=${sessionScope['userre']}">删除</a>
     </div>
 </c:forEach>
 
@@ -27,7 +32,7 @@
     <div style="float: left; margin: 10px">
         <img src="${goods1.goodurl}" alt="#" style="width: 50px; height: 50px;">
         <p style="font-size: 13px; text-align: center; color: #bfbfbf">${goods1.goodsname}</p>
-        <a href="mineServelet?method=thisSGid&thisSGid=${goods1.goodsid}&thismoney=${goods1.newprice}&userid=${sessionScope['userre']}">确认</a>
+        <a class="atcolor" href="mineServelet?method=thisSGid&thisSGid=${goods1.goodsid}&thismoney=${goods1.newprice}&userid=${sessionScope['userre']}">确认</a>
     </div>
 </c:forEach>
 
