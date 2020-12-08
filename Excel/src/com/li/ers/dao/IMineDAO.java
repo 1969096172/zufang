@@ -9,7 +9,7 @@ import java.util.List;
 
 public interface IMineDAO {
 
-    void updateMinefix(String sql, User user);
+    int updateMinefix(String sql, User user);
 
     int addmoney(String sql, Account account);
 
@@ -18,4 +18,10 @@ public interface IMineDAO {
     List<Kind> getkind(String sql);
 
     List<Goods> goods0(String sql, int userid);
+
+    void changestaute(String sql, int goodsid);
+
+    void changemoney(String sql, int goodsid, double goodsmoney);
+
+    void deletegoods(String sql, int goodsid);
 }

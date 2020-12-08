@@ -11,9 +11,10 @@ import java.util.List;
 
 public class MineService {
     IMineDAO mineDAO = new MineDAO();
-    public void fixuser(User user) {
+    public int fixuser(User user) {
         String sql = "update user set username=?, userpassword=?, usertel=?, userurl=?, useraddress=? where userid=?";
-        mineDAO.updateMinefix(sql,user);
+        int userid =  mineDAO.updateMinefix(sql,user);
+        return userid;
     }
 
     public int getmoney(Account account) {
@@ -36,8 +37,35 @@ public class MineService {
     }
 
     public List<Goods> getgoods0(int userid) {
-        String sql = "select * from goods where status = 0";
+        String sql = "select * from goods where status = 0 and userid = ?";
         List<Goods> goods0 = mineDAO.goods0(sql, userid);
         return goods0;
+    }
+
+    public List<Goods> getgoods1(int userid) {
+        String sql = "select * from goods where status = 1 and userid = ?";
+        List<Goods> goods0 = mineDAO.goods0(sql, userid);
+        return goods0;
+    }
+
+    public List<Goods> getgoods2(int userid) {
+        String sql = "select * from goods where status = 2 and userid = ?";
+        List<Goods> goods0 = mineDAO.goods0(sql, userid);
+        return goods0;
+    }
+
+    public void changestate(int goodsid) {
+        String sql = "update goods set status=? where goodsid=?";
+        mineDAO.changestaute(sql,goodsid);
+    }
+
+    public void changemoney(int userid, double goodsmoney) {
+        String sql = "update account set balance=? where userid=?";
+        mineDAO.changemoney(sql,userid,goodsmoney);
+    }
+
+    public void deletegoods(int goodsid) {
+        String sql = "delete from goods where goodsid=?";
+        mineDAO.deletegoods(sql,goodsid);
     }
 }

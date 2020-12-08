@@ -47,6 +47,7 @@ public class MineServelet extends HttpServlet {
         }
     }
 
+
     protected void getminefix(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         int userid = Integer.parseInt(request.getParameter("userid"));
@@ -99,7 +100,6 @@ public class MineServelet extends HttpServlet {
 
                         // 拼接文件名
                         File file = new File(path, name);
-                        user.setUserurl("upload/" + name);
                         // 上传
                         if (!file.isDirectory()) {
                             item.write(file);
@@ -108,7 +108,7 @@ public class MineServelet extends HttpServlet {
                     }
                 }
 
-                mineService.fixuser(user);
+                userI =  mineService.fixuser(user);
 
             } else {
 
@@ -116,6 +116,7 @@ public class MineServelet extends HttpServlet {
         } catch (Exception e) {
             e.printStackTrace();
         }
+
         getminefixss(request,response);
 
     }
@@ -257,10 +258,33 @@ public class MineServelet extends HttpServlet {
         int userid = Integer.parseInt(request.getParameter("userid"));
 
         List<Goods> goods0 = mineService.getgoods0(userid);
-
+        List<Goods> goods1 = mineService.getgoods1(userid);
+        List<Goods> goods2 = mineService.getgoods2(userid);
         HttpSession session = request.getSession();  //通过request获取session
         session.setAttribute("userre",userid);
         session.setAttribute("goods0",goods0);
+        session.setAttribute("goods1",goods1);
+        session.setAttribute("goods2",goods2);
         request.getRequestDispatcher("/WEB-INF/pages/adgoods.jsp").forward(request, response);
+    }
+    protected void thisSGid(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
+        int userid = Integer.parseInt(request.getParameter("userid"));
+        int goodsid = Integer.parseInt(request.getParameter("thisSGid"));
+        double goodsmoney = Double.parseDouble(request.getParameter("thismoney"));
+
+        mineService.changestate(goodsid);
+        mineService.changemoney(userid,goodsmoney);
+        setminerelgoods(request,response);
+    }
+    /**
+     * 删除上架商品
+     */
+    protected void deletegoods(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
+        int userid = Integer.parseInt(request.getParameter("userid"));
+        int goodsid = Integer.parseInt(request.getParameter("deleteid"));
+
+        mineService.deletegoods(goodsid);
+
+        setminerelgoods(request,response);
     }
 }

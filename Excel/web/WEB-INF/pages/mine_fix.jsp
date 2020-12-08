@@ -24,28 +24,28 @@
 <body>
 
 <form action="${pageContext.request.contextPath }/mineServelet?method=getmine_fixgo" method=post  enctype="multipart/form-data">
-    <input type=hidden value="${sessionScope['usermineM'].userid}" name=userID >
+    <input type=hidden value="${sessionScope['usermineM'].userid}" name=userid >
     <table>
         <tbody>
         <tr>
             <td align=right class="text">头像</td>
-            <td><input type="file" value="${sessionScope['usermineM'].userurl}" name=img style="height: 22px"></td>
+            <td><input type="file" value="${sessionScope['usermineM'].userurl}" name=userurl style="height: 22px"></td>
         </tr>
         <tr>
             <td align=right class="text">用户</td>
-            <td><input value="${sessionScope['usermineM'].username}" name=account></td>
+            <td><input value="${sessionScope['usermineM'].username}" name=username></td>
         </tr>
         <tr>
             <td align=right class="text">密码</td>
-            <td><input type="password" value="${sessionScope['usermineM'].userpassword}" name=password></td>
+            <td><input type="password" value="${sessionScope['usermineM'].userpassword}" name=userpassword></td>
         </tr>
         <tr>
             <td align=right class="text">电话</td>
-            <td><input value="${sessionScope['usermineM'].usertel}" name=tel></td>
+            <td><input value="${sessionScope['usermineM'].usertel}" name=usertel></td>
         </tr>
         <tr>
             <td align=right class="text">地址</td>
-            <td><input value="${sessionScope['usermineM'].useraddress}" name=address></td>
+            <td><input value="${sessionScope['usermineM'].useraddress}" name=useraddress></td>
         </tr>
         <input type=hidden value="${sessionScope['usermineM'].adminid}" name=adminid>
         <tr>

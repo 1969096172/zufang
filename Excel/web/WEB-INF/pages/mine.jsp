@@ -24,15 +24,14 @@
 <%@ include file="/commons/header_mine.jsp" %>
 <div id="contenter">
     <div id="photo">
-
-
         <img src="<c:if test="${sessionScope['userS'] ne null}">
                     ${sessionScope['userS'].userurl}
                 </c:if>
                 <c:if test="${sessionScope['userS'] eq null}">
                     ${pageContext.request.contextPath}/public/img/cup.jpg
                 </c:if>" alt="#"
-             STYLE="width: 90%; height: 70%; margin: auto; padding-top: 10px; border-radius: 50%; display: block"></div>
+             STYLE="width: 90%; height: 70%; margin: auto; padding-top: 10px; border-radius: 50%; display: block">
+    </div>
     <div class="lianjie11"></div>
     <div class="lianjie1"></div>
     <div class="lianjie0"></div>

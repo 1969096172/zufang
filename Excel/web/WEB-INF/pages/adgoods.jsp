@@ -13,13 +13,30 @@
 </head>
 <body>
 <h3 style="text-align: center; color: #555555">发布商品</h3>
-<h3>已上架</h3>
+<h3 style="clear: none;">已上架</h3>
 <c:forEach items="${sessionScope['goods0']}" var="goods0">
-    ${goods0.goodsname}
-
+    <div style="float: left; margin: 10px">
+        <img src="${goods0.goodurl}" alt="#" style="width: 50px; height: 50px;">
+        <p style="font-size: 13px; text-align: center; color: #bfbfbf">${goods0.goodsname}</p>
+        <a href="mineServelet?method=deletegoods&deleteid=${goods0.goodsid}&userid=${sessionScope['userre']}">删除</a>
+    </div>
 </c:forEach>
-<h3>正在交易</h3>
 
-<h3>交易完成</h3>
+<h3 style="clear: both">正在交易</h3>
+<c:forEach items="${sessionScope['goods1']}" var="goods1">
+    <div style="float: left; margin: 10px">
+        <img src="${goods1.goodurl}" alt="#" style="width: 50px; height: 50px;">
+        <p style="font-size: 13px; text-align: center; color: #bfbfbf">${goods1.goodsname}</p>
+        <a href="mineServelet?method=thisSGid&thisSGid=${goods1.goodsid}&thismoney=${goods1.newprice}&userid=${sessionScope['userre']}">确认</a>
+    </div>
+</c:forEach>
+
+<h3 style="clear: both">交易完成</h3>
+<c:forEach items="${sessionScope['goods2']}" var="goods2">
+    <div style="float: left; margin: 10px">
+        <img src="${goods2.goodurl}" alt="#" style="width: 50px; height: 50px;">
+        <p style="font-size: 13px; text-align: center; color: #bfbfbf">${goods2.goodsname}</p>
+    </div>
+</c:forEach>
 </body>
 </html>

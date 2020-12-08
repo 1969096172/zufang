@@ -51,5 +51,9 @@ public class LoginServlet extends HttpServlet {
         response.sendRedirect("index.jsp");
     }
 
-
+    protected void logout(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        HttpSession session = request.getSession();
+        session.invalidate();
+        response.sendRedirect("index.jsp");
+    }
 }

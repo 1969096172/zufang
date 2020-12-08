@@ -7,16 +7,13 @@ import com.li.ers.model.Goods;
 import com.li.ers.model.Kind;
 import com.li.ers.model.User;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.Statement;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
 public class MineDAO implements IMineDAO {
     @Override
-    public void updateMinefix(String sql, User user) {
+    public int updateMinefix(String sql, User user) {
         Connection connection = null;
         PreparedStatement preparedStatement = null;
         ResultSet resultSet = null;
@@ -36,11 +33,13 @@ public class MineDAO implements IMineDAO {
             connection.close();
             preparedStatement.close();
 
+            return user.getUserid();
         } catch (Exception e) {
             e.printStackTrace();
         } finally{
             DBershou.release(connection);
         }
+        return 0;
     }
 
     @Override
@@ -134,8 +133,9 @@ public class MineDAO implements IMineDAO {
         ResultSet resultSet = null;
         try {
             connection = DBershou.getConnection();
-            statement = connection.createStatement();
-            resultSet = statement.executeQuery(sql);
+            preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setInt(1,userid);
+            resultSet = preparedStatement.executeQuery();
             List<Goods> goods0L = new ArrayList<>();
             while (resultSet.next()){
                 Goods goods0 = new Goods();
@@ -154,7 +154,7 @@ public class MineDAO implements IMineDAO {
                 goods0L.add(goods0);
             }
             resultSet.close();
-            statement.close();
+            preparedStatement.close();
             connection.close();
             return goods0L;
         } catch (Exception e) {
@@ -164,5 +164,103 @@ public class MineDAO implements IMineDAO {
         }
         return null;
     }
+
+    @Override
+    public void changestaute(String sql, int goodsid) {
+        Connection connection = null;
+        PreparedStatement preparedStatement = null;
+        ResultSet resultSet = null;
+        try {
+            connection = DBershou.getConnection();
+            preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setInt(1,2);
+            preparedStatement.setInt(2,goodsid);
+
+            preparedStatement.executeUpdate();
+            preparedStatement.close();
+            connection.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }finally {
+            DBershou.release(connection);
+        }
+    }
+
+    @Override
+    public void changemoney(String sql, int userid, double goodsmoney) {
+        Connection connection = null;
+        PreparedStatement preparedStatement = null;
+        ResultSet resultSet = null;
+        try {
+            String Sql = "select * from account where userid = ?";
+            double cardmondey =  findcard(Sql,userid);
+            connection = DBershou.getConnection();
+            preparedStatement = connection.prepareStatement(sql);
+            double money = cardmondey + goodsmoney;
+            preparedStatement.setDouble(1,money);
+            preparedStatement.setInt(2,userid);
+
+            preparedStatement.executeUpdate();
+            preparedStatement.close();
+            connection.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }finally {
+            DBershou.release(connection);
+        }
+    }
+
+    /**
+     * 删除商品
+     * @param sql
+     * @param goodsid
+     */
+    @Override
+    public void deletegoods(String sql, int goodsid) {
+        Connection connection = null;
+        PreparedStatement preparedStatement = null;
+        ResultSet resultSet = null;
+        try {
+            connection = DBershou.getConnection();
+            preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setInt(1,goodsid);
+            preparedStatement.executeUpdate();
+            preparedStatement.close();
+            connection.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }finally {
+            DBershou.release(connection);
+        }
+    }
+
+    private double findcard(String sql, int userid) {
+        Connection connection = null;
+        PreparedStatement preparedStatement = null;
+        ResultSet resultSet = null;
+        try {
+            connection = DBershou.getConnection();
+            preparedStatement = connection.prepareStatement(sql);
+
+            preparedStatement.setInt(1,userid);
+            resultSet = preparedStatement.executeQuery();
+            if(resultSet.next()){
+                double money = resultSet.getDouble("balance");
+                connection.close();
+                preparedStatement.close();
+                resultSet.close();
+
+                return money;
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally{
+            DBershou.release(connection);
+        }
+
+        return 0;
+    }
+
 
 }
