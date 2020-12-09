@@ -50,4 +50,14 @@
         <servlet-name>OrderServelet</servlet-name>
         <url-pattern>/orderServelet</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <description></description>
+        <display-name>AdminServelet</display-name>
+        <servlet-name>AdminServelet</servlet-name>
+        <servlet-class>com.li.ers.servlet.AdminServelet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AdminServelet</servlet-name>
+        <url-pattern>/adminServelet</url-pattern>
+    </servlet-mapping>
 </web-app>

@@ -2,10 +2,12 @@ package com.li.ers.servlet;
 
 import com.li.ers.model.Account;
 import com.li.ers.model.Goods;
+import com.li.ers.model.Orders;
 import com.li.ers.model.User;
 import com.li.ers.service.HomeService;
 import com.li.ers.service.LoginSevice;
 import com.li.ers.service.MineService;
+import com.li.ers.service.Orderservice;
 import javafx.application.Application;
 import javafx.stage.Stage;
 import org.apache.commons.beanutils.BeanUtils;
@@ -27,6 +29,7 @@ import java.util.List;
 public class MineServelet extends HttpServlet {
     private MineService mineService = new MineService();
     private HomeService homeService = new HomeService();
+    private Orderservice orderservice = new Orderservice();
     int userI=0;
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         doPost(request, response);
@@ -271,6 +274,19 @@ public class MineServelet extends HttpServlet {
         int userid = Integer.parseInt(request.getParameter("userid"));
         int goodsid = Integer.parseInt(request.getParameter("thisSGid"));
         double goodsmoney = Double.parseDouble(request.getParameter("thismoney"));
+
+        mineService.changestate(goodsid);
+        mineService.changemoney(userid,goodsmoney);
+        setminerelgoods(request,response);
+    }
+    protected void refusegoods(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
+        int userid = Integer.parseInt(request.getParameter("userid"));
+        int goodsid = Integer.parseInt(request.getParameter("thisSGid"));
+        double goodsmoney = Double.parseDouble(request.getParameter("thismoney"));
+
+//        Orders orders = orderservice.getuserid(goodsid);
+
+
 
         mineService.changestate(goodsid);
         mineService.changemoney(userid,goodsmoney);

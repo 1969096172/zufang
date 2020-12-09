@@ -37,19 +37,19 @@ public class MineService {
     }
 
     public List<Goods> getgoods0(int userid) {
-        String sql = "select * from goods where status = 0 and userid = ?";
+        String sql = "select * from goods where status = 0 and adminid != 1 and userid = ?";
         List<Goods> goods0 = mineDAO.goods0(sql, userid);
         return goods0;
     }
 
     public List<Goods> getgoods1(int userid) {
-        String sql = "select * from goods where status = 1 and userid = ?";
+        String sql = "select * from goods where status = 1 and adminid != 1 and userid = ?";
         List<Goods> goods0 = mineDAO.goods0(sql, userid);
         return goods0;
     }
 
     public List<Goods> getgoods2(int userid) {
-        String sql = "select * from goods where status = 2 and userid = ?";
+        String sql = "select * from goods where status = 2 and adminid != 1 and userid = ?";
         List<Goods> goods0 = mineDAO.goods0(sql, userid);
         return goods0;
     }

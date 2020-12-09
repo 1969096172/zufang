@@ -1,6 +1,8 @@
 package com.li.ers.servlet;
 
+import com.li.ers.model.Goods;
 import com.li.ers.model.User;
+import com.li.ers.service.AdminService;
 import com.li.ers.service.HomeService;
 import com.li.ers.service.LoginSevice;
 import javafx.application.Application;
@@ -13,9 +15,11 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.lang.reflect.Method;
+import java.util.List;
 
 public class LoginServlet extends HttpServlet {
     private LoginSevice loginService = new LoginSevice();
+    private AdminService adminService = new AdminService();
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         doPost(request, response);
     }
@@ -45,11 +49,12 @@ public class LoginServlet extends HttpServlet {
 
         String useraccount = request.getParameter("username");
         String userpassword = request.getParameter("userpassword");
-        String str1=useraccount.substring(0,1);
-        if (str1.equals("a")){
+        if (useraccount.equals("admin")){
             int adminid = loginService.admin_in(useraccount,userpassword);
+            List<Goods> goodsList =  adminService.getad0goods();
             HttpSession session = request.getSession();  //通过request获取session
             session.setAttribute("adminid",adminid);
+            session.setAttribute("goodsList",goodsList);
             request.getRequestDispatcher("/WEB-INF/admin/admin.jsp").forward(request, response);
         }else {
             int userid = loginService.login_in(useraccount,userpassword);

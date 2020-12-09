@@ -33,6 +33,7 @@
         <img src="${goods1.goodurl}" alt="#" style="width: 50px; height: 50px;">
         <p style="font-size: 13px; text-align: center; color: #bfbfbf">${goods1.goodsname}</p>
         <a class="atcolor" href="mineServelet?method=thisSGid&thisSGid=${goods1.goodsid}&thismoney=${goods1.newprice}&userid=${sessionScope['userre']}">确认</a>
+        <a class="atcolor" href="mineServelet?method=reminegoods&thisSGid=${goods1.goodsid}&thismoney=${goods1.newprice}&userid=${sessionScope['userre']}">取消</a>
     </div>
 </c:forEach>
 
