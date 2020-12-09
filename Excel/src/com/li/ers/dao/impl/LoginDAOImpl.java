@@ -39,4 +39,35 @@ public class LoginDAOImpl implements ILoginDAO {
 
         return 0;
     }
+
+    @Override
+    public int admin_login_in(String sql, String useraccount, String userpassword) {
+        Connection connection = null;
+        PreparedStatement preparedStatement = null;
+        ResultSet resultSet = null;
+        try{
+            connection = DBershou.getConnection();
+            preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setString(1,useraccount);
+            preparedStatement.setString(2,userpassword);
+
+            resultSet = preparedStatement.executeQuery();
+            if (resultSet.next()){
+
+                int adminid =  resultSet.getInt("adminid");
+
+                resultSet.close();
+                preparedStatement.close();
+                connection.close();
+                return adminid;
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }finally {
+
+            DBershou.release(connection);
+        }
+
+        return 0;
+    }
 }

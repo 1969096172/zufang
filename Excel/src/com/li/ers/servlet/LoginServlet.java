@@ -45,10 +45,19 @@ public class LoginServlet extends HttpServlet {
 
         String useraccount = request.getParameter("username");
         String userpassword = request.getParameter("userpassword");
-        int userid = loginService.login_in(useraccount,userpassword);
-        HttpSession session = request.getSession();  //通过request获取session
-        session.setAttribute("userid",userid);
-        response.sendRedirect("index.jsp");
+        String str1=useraccount.substring(0,1);
+        if (str1.equals("a")){
+            int adminid = loginService.admin_in(useraccount,userpassword);
+            HttpSession session = request.getSession();  //通过request获取session
+            session.setAttribute("adminid",adminid);
+            request.getRequestDispatcher("/WEB-INF/admin/admin.jsp").forward(request, response);
+        }else {
+            int userid = loginService.login_in(useraccount,userpassword);
+            HttpSession session = request.getSession();  //通过request获取session
+            session.setAttribute("userid",userid);
+            response.sendRedirect("index.jsp");
+        }
+
     }
 
     protected void logout(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
