@@ -284,12 +284,10 @@ public class MineServelet extends HttpServlet {
         int goodsid = Integer.parseInt(request.getParameter("thisSGid"));
         double goodsmoney = Double.parseDouble(request.getParameter("thismoney"));
 
-//        Orders orders = orderservice.getuserid(goodsid);
-
-
-
-        mineService.changestate(goodsid);
-        mineService.changemoney(userid,goodsmoney);
+        Orders orders = orderservice.getuserid(goodsid);
+        orderservice.del(orders.getOrderid());
+        mineService.changestate0(goodsid);
+        mineService.changemoney(orders.getUserid(),goodsmoney);
         setminerelgoods(request,response);
     }
     /**

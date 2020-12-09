@@ -32,4 +32,15 @@ public class Orderservice {
         List<Goods> goodsList = ordersDAO.getgoods0(sql,orders2);
         return goodsList;
     }
+
+    public Orders getuserid(int goodsid) {
+        String sql = "select * from orders where goodsid = ?";
+        Orders orders = ordersDAO.getuserid(sql,goodsid);
+        return orders;
+    }
+
+    public void del(int orderid) {
+        String sql = "delete from orders where orderid=?";
+        ordersDAO.del(sql, orderid);
+    }
 }

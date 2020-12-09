@@ -234,6 +234,27 @@ public class MineDAO implements IMineDAO {
         }
     }
 
+    @Override
+    public void changestaute0(String sql, int goodsid) {
+        Connection connection = null;
+        PreparedStatement preparedStatement = null;
+        ResultSet resultSet = null;
+        try {
+            connection = DBershou.getConnection();
+            preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setInt(1,0);
+            preparedStatement.setInt(2,goodsid);
+
+            preparedStatement.executeUpdate();
+            preparedStatement.close();
+            connection.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }finally {
+            DBershou.release(connection);
+        }
+    }
+
     private double findcard(String sql, int userid) {
         Connection connection = null;
         PreparedStatement preparedStatement = null;

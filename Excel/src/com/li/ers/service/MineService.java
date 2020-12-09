@@ -68,4 +68,9 @@ public class MineService {
         String sql = "delete from goods where goodsid=?";
         mineDAO.deletegoods(sql,goodsid);
     }
+
+    public void changestate0(int goodsid) {
+        String sql = "update goods set status=? where goodsid=?";
+        mineDAO.changestaute0(sql,goodsid);
+    }
 }

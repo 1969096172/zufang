@@ -82,4 +82,50 @@ public class OrderDAO implements IOrdersDAO {
         }
         return null;
     }
+
+    @Override
+    public Orders getuserid(String sql, int goodsid) {
+        Connection connection = null;
+        PreparedStatement preparedStatement = null;
+        ResultSet resultSet = null;
+        try {
+            connection = DBershou.getConnection();
+            preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setInt(1,goodsid);
+            resultSet = preparedStatement.executeQuery();
+            while (resultSet.next()){
+                Orders orders = new Orders();
+                orders.setOrderid(resultSet.getInt("orderid"));
+                orders.setUserid(resultSet.getInt("userid"));
+                resultSet.close();
+                preparedStatement.close();
+                connection.close();
+                return orders;
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }finally {
+            DBershou.release(connection);
+        }
+        return null;
+    }
+
+    @Override
+    public void del(String sql, int orderid) {
+        Connection connection = null;
+        PreparedStatement preparedStatement = null;
+        ResultSet resultSet = null;
+        try{
+            connection = DBershou.getConnection();
+            preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setInt(1,orderid);
+            preparedStatement.executeUpdate();
+            preparedStatement.close();
+            connection.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }finally {
+            DBershou.release(connection);
+        }
+    }
 }

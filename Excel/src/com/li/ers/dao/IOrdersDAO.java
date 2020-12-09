@@ -10,4 +10,8 @@ public interface IOrdersDAO {
     List<Orders> getgoodsid(String sql, int userid);
 
     List<Goods> getgoods0(String sql, List<Orders> goods);
+
+    Orders getuserid(String sql, int goodsid);
+
+    void del(String sql, int orderid);
 }
