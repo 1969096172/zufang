@@ -2,7 +2,7 @@ package com.li.ers.dao;
 
 import com.li.ers.model.Goods;
 import com.li.ers.model.User;
-import com.li.ers.web.CriteriaComputer;
+import com.li.ers.web.CriteriaGoods;
 import com.li.ers.web.Page;
 
 import java.util.List;
@@ -12,12 +12,19 @@ public interface HomegoodsDAO {
      *
      * @return
      */
-    Page<Goods> getPage(CriteriaComputer cc);
+    Page<Goods> getPage(CriteriaGoods cc);
 
-    long getTotalComputerNumber(CriteriaComputer cc);
+    long getTotalComputerNumber(CriteriaGoods cc);
 
-    List<Goods> getPageList(CriteriaComputer cc, int pageSize);
+    List<Goods> getPageList(CriteriaGoods cc, int pageSize);
 
     User getmine(String sql,int userid);
 
+    List<Goods> getserch(String sql, String serch);
+
+    Goods getgoods(String sql, int goodsid);
+
+    int chagcrad(String sql, String dtmon, double dtpic, int userdtid);
+
+    void changestaute1(String sql, int goodsid);
 }

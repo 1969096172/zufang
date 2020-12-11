@@ -14,4 +14,6 @@ public interface IOrdersDAO {
     Orders getuserid(String sql, int goodsid);
 
     void del(String sql, int orderid);
+
+    void add(String sql, int userdtid, int goodsid);
 }

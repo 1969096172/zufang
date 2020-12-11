@@ -4,22 +4,19 @@ import com.li.ers.dao.HomegoodsDAO;
 import com.li.ers.db.DBershou;
 import com.li.ers.model.Goods;
 import com.li.ers.model.User;
-import com.li.ers.web.CriteriaComputer;
+import com.li.ers.web.CriteriaGoods;
 import com.li.ers.web.Page;
-import org.apache.commons.dbutils.QueryRunner;
-import org.apache.commons.dbutils.handlers.BeanHandler;
 
-import java.io.File;
-import java.io.FileInputStream;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.ArrayList;
 import java.util.List;
 
 public class HomegoodsDAOImpl<T> extends BaseDAO<Goods> implements HomegoodsDAO {
 
     @Override
-    public Page<Goods> getPage(CriteriaComputer cc) {
+    public Page<Goods> getPage(CriteriaGoods cc) {
         // TODO Auto-generated method stub
         Page<Goods> page = new Page<>(cc.getPageNo());
 
@@ -30,17 +27,17 @@ public class HomegoodsDAOImpl<T> extends BaseDAO<Goods> implements HomegoodsDAO 
         return page;
     }
     @Override
-    public long getTotalComputerNumber(CriteriaComputer cc) {
+    public long getTotalComputerNumber(CriteriaGoods cc) {
         // TODO Auto-generated method stub
         String sql = "SELECT count(goodsid) FROM goods WHERE newprice BETWEEN ? AND ?";
         return getSingleVal(sql, cc.getMinPrice(), cc.getMaxPrice());
     }
 
     @Override
-    public List<Goods> getPageList(CriteriaComputer cc, int pageSize) {
+    public List<Goods> getPageList(CriteriaGoods cc, int pageSize) {
         // TODO Auto-generated method stub
         String sql = "SELECT goodsid,goodsname,newprice,oldprice,newkind,"+
-                "status,goodurl,brand,remark,kindid FROM goods WHERE newprice BETWEEN ? AND ?"+
+                "status,goodurl,brand,remark,kindid,adminid,userid FROM goods WHERE newprice BETWEEN ? AND ?"+
                 "LIMIT ?,?";
 
         return queryForList(sql, cc.getMinPrice(),cc.getMaxPrice(),(cc.getPageNo() - 1)*pageSize,pageSize);
@@ -81,6 +78,126 @@ public class HomegoodsDAOImpl<T> extends BaseDAO<Goods> implements HomegoodsDAO 
         }
 
         return null;
+    }
+
+    @Override
+    public List<Goods> getserch(String sql, String serch) {
+        Connection connection = null;
+        PreparedStatement preparedStatement = null;
+        ResultSet resultSet = null;
+        try{
+            connection = DBershou.getConnection();
+            preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setString(1,serch);
+            resultSet = preparedStatement.executeQuery();
+            List<Goods> goodsList = new ArrayList<>();
+            while (resultSet.next()){
+                Goods goods = new Goods();
+                goods.setGoodsid(resultSet.getInt("goodsid"));
+                goods.setGoodsname(resultSet.getString("goodsname"));
+                goods.setNewprice(resultSet.getDouble("newprice"));
+                goods.setOldprice(resultSet.getDouble("oldprice"));
+                goods.setNewkind(resultSet.getString("newkind"));
+                goods.setStatus(resultSet.getInt("status"));
+                goods.setGoodurl(resultSet.getString("goodurl"));
+                goods.setBrand(resultSet.getString("brand"));
+                goods.setRemark(resultSet.getString("remark"));
+                goods.setKindid(resultSet.getInt("kindid"));
+                goods.setAdminid(resultSet.getInt("adminid"));
+                goods.setUserid(resultSet.getInt("userid"));
+                goodsList.add(goods);
+            }
+            resultSet.close();
+            preparedStatement.close();
+            connection.close();
+            return goodsList;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }finally {
+            DBershou.release(connection);
+        }
+        return null;
+    }
+
+    @Override
+    public Goods getgoods(String sql, int goodsid) {
+        Connection connection = null;
+        PreparedStatement preparedStatement = null;
+        ResultSet resultSet = null;
+        try{
+            connection = DBershou.getConnection();
+            preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setInt(1,goodsid);
+            resultSet = preparedStatement.executeQuery();
+            while (resultSet.next()){
+                Goods goods = new Goods();
+                goods.setGoodsid(resultSet.getInt("goodsid"));
+                goods.setGoodsname(resultSet.getString("goodsname"));
+                goods.setNewprice(resultSet.getDouble("newprice"));
+                goods.setOldprice(resultSet.getDouble("oldprice"));
+                goods.setNewkind(resultSet.getString("newkind"));
+                goods.setStatus(resultSet.getInt("status"));
+                goods.setGoodurl(resultSet.getString("goodurl"));
+                goods.setBrand(resultSet.getString("brand"));
+                goods.setRemark(resultSet.getString("remark"));
+                goods.setKindid(resultSet.getInt("kindid"));
+                goods.setAdminid(resultSet.getInt("adminid"));
+                goods.setUserid(resultSet.getInt("userid"));
+                resultSet.close();
+                preparedStatement.close();
+                connection.close();
+                return goods;
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }finally {
+            DBershou.release(connection);
+        }
+        return null;
+    }
+
+    @Override
+    public int chagcrad(String sql, String dtmon, double dtpic, int userdtid) {
+        Connection connection = null;
+        PreparedStatement preparedStatement = null;
+        ResultSet resultSet = null;
+        try {
+            connection = DBershou.getConnection();
+            preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setDouble(1,dtpic);
+            preparedStatement.setInt(2,userdtid);
+            preparedStatement.setString(3,dtmon);
+            preparedStatement.executeUpdate();
+            preparedStatement.close();
+            connection.close();
+            return 1;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }finally {
+            DBershou.release(connection);
+        }
+        return 0;
+    }
+
+    @Override
+    public void changestaute1(String sql, int goodsid) {
+        Connection connection = null;
+        PreparedStatement preparedStatement = null;
+        ResultSet resultSet = null;
+        try {
+            connection = DBershou.getConnection();
+            preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setInt(1,goodsid);
+
+            preparedStatement.executeUpdate();
+            preparedStatement.close();
+            connection.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }finally {
+            DBershou.release(connection);
+        }
     }
 
 }

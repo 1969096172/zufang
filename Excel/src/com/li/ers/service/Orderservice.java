@@ -43,4 +43,9 @@ public class Orderservice {
         String sql = "delete from orders where orderid=?";
         ordersDAO.del(sql, orderid);
     }
+
+    public void add(int goodsid, int userdtid) {
+        String sql = "insert into orders(orderstate, userid, goodsid) values(?,?,?)";
+        ordersDAO.add(sql,userdtid,goodsid);
+    }
 }

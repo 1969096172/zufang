@@ -128,4 +128,25 @@ public class OrderDAO implements IOrdersDAO {
             DBershou.release(connection);
         }
     }
+
+    @Override
+    public void add(String sql, int userdtid, int goodsid) {
+        Connection connection = null;
+        PreparedStatement preparedStatement = null;
+        ResultSet resultSet = null;
+        try{
+            connection = DBershou.getConnection();
+            preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setInt(1,0);
+            preparedStatement.setInt(2,userdtid);
+            preparedStatement.setInt(3,goodsid);
+            preparedStatement.executeUpdate();
+            preparedStatement.close();
+            connection.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }finally {
+            DBershou.release(connection);
+        }
+    }
 }

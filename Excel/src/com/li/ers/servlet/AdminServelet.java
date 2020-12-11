@@ -1,6 +1,7 @@
 package com.li.ers.servlet;
 
 import com.li.ers.model.Goods;
+import com.li.ers.model.User;
 import com.li.ers.service.AdminService;
 
 import javax.servlet.ServletException;

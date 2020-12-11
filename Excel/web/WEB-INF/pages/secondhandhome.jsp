@@ -15,6 +15,7 @@
 <head>
     <title>二手交易平台</title>
     <link href="<%=cssUrl%>secondhandhome.css" rel="stylesheet">
+    <link href="<%=cssUrl%>search.css" rel="stylesheet">
 
 </head>
 <body>
@@ -27,11 +28,13 @@
 </c:if>
 <%@ include file="/commons/header.jsp" %>
 <div id="container">
-    <a href="#"><div class="logo"></div></a>
-    <form>
-        <div  class="search">
-            <input type="text" size="40" name="search" class="search1" placeholder="电视">
-            <input type="submit" name="submit" class="submit" value="搜索">
+    <form action="${pageContext.request.contextPath }/homeServlet?method=getgoods" method="post">
+        <div class="search">
+            <div class="btn">从</div>
+            <input type="text" class="color" name="minPrice" placeholder="最低价格"/>
+            <div class="btn">到</div>
+            <input type="text" class="color" name="maxPrice" placeholder="最高价格"/>
+            <button type="submit" class="searchBtn"> 查询</button>
         </div>
     </form>
 </div>
@@ -44,25 +47,125 @@
         <li class="act">电子用品</li>
     </ul>
     <div id="content_main">
+        <div class="select" style="display: block;" >
+            <c:forEach items="${goodslist.list}" var="goods">
+                <c:if test="${goods.adminid != 1 && goods.status == 0}">
+                    <div class="select_content" onclick="window.location.href='${pageContext.request.contextPath}/homeServlet?method=getdetails&goodsdetid=${goods.goodsid}&userdetid=${userid}';return false">
+                        <img src="${goods.goodurl}" alt="#" class="con_photo">
+                        <div class="se_con_text">
+                            <p>${goods.goodsname }</p>
+                            <p>${goods.remark}</p>
+                            <p>${goods.newprice}元</p>
+                            <p>${goods.oldprice}元</p>
+                            <p><a>${goods.newkind}成新</a></p>
+                            <p>正在出售</p>
+                        </div>
+                    </div>
+                </c:if>
+            </c:forEach>
+        </div>
         <div class="select" style="display: block;">
             <c:forEach items="${goodslist.list}" var="goods">
-                <div class="select_content">
-                    <img src="${pageContext.request.contextPath}/public/img/cup.jpg" alt="#" class="con_photo">
-                    <div class="se_con_text">
-                        <p>${goods.goodsname }</p>
-                        <p>${goods.goodsname }</p>
-                        <p>12.0元</p>
-                        <p>20.0元</p>
-                        <p><a>九成新</a></p>
-                        <p>正在出售</p>
-                    </div>
-                </div>
+
+                <c:if test="${goods.adminid != 1}">
+                    <c:if test="${goods.kindid==1}">
+                        <div class="select_content" onclick="window.location.href='${pageContext.request.contextPath}/homeServlet?method=getdetails&goodsdetid=${goods.goodsid}&userdetid=${userid}';return false">
+                            <img src="${goods.goodurl}" alt="#" class="con_photo">
+                            <div class="se_con_text">
+                                <p>${goods.goodsname }</p>
+                                <p>${goods.remark}</p>
+                                <p>${goods.newprice}元</p>
+                                <p>${goods.oldprice}元</p>
+                                <p class="new-status">${goods.newkind}成新</p>
+                                <p>正在出售</p>
+                            </div>
+                        </div>
+                    </c:if>
+                </c:if>
             </c:forEach>
 
         </div>
-        <div class="select">3</div>
-        <div class="select">4</div>
-        <div class="select">5</div>
+        <div class="select">
+            <c:forEach items="${goodslist.list}" var="goods">
+                <c:if test="${goods.adminid != 1}">
+                    <c:if test="${goods.kindid==2}">
+                        <div class="select_content" onclick="window.location.href='${pageContext.request.contextPath}/homeServlet?method=getdetails&goodsdetid=${goods.goodsid}&userdetid=${userid}';return false">
+                            <img src="${goods.goodurl}" alt="#" class="con_photo">
+                            <div class="se_con_text">
+                                <p>${goods.goodsname }</p>
+                                <p>${goods.remark}</p>
+                                <p>${goods.newprice}元</p>
+                                <p>${goods.oldprice}元</p>
+                                <p><a>${goods.newkind}成新</a></p>
+                                <p>正在出售</p>
+                            </div>
+                        </div>
+                    </c:if>
+                </c:if>
+            </c:forEach>
+        </div>
+        <div class="select">
+            <c:forEach items="${goodslist.list}" var="goods">
+                <c:if test="${goods.adminid != 1}">
+                    <c:if test="${goods.kindid==3}">
+                        <div class="select_content" onclick="window.location.href='${pageContext.request.contextPath}/homeServlet?method=getdetails&goodsdetid=${goods.goodsid}&userdetid=${userid}';return false">
+                            <img src="${goods.goodurl}" alt="#" class="con_photo">
+                            <div class="se_con_text">
+                                <p>${goods.goodsname }</p>
+                                <p>${goods.remark}</p>
+                                <p>${goods.newprice}元</p>
+                                <p>${goods.oldprice}元</p>
+                                <p><a>${goods.newkind}成新</a></p>
+                                <p>正在出售</p>
+                            </div>
+                        </div>
+                    </c:if>
+                </c:if>
+            </c:forEach>
+        </div>
+        <div class="select">
+            <c:forEach items="${goodslist.list}" var="goods">
+                <c:if test="${goods.adminid != 1}">
+                    <c:if test="${goods.kindid==4}">
+                        <div class="select_content" onclick="window.location.href='${pageContext.request.contextPath}/homeServlet?method=getdetails&goodsdetid=${goods.goodsid}&userdetid=${userid}';return false">
+                            <img src="${goods.goodurl}" alt="#" class="con_photo">
+                            <div class="se_con_text">
+                                <p>${goods.goodsname }</p>
+                                <p>${goods.remark}</p>
+                                <p>${goods.newprice}元</p>
+                                <p>${goods.oldprice}元</p>
+                                <p><a>${goods.newkind}成新</a></p>
+                                <p>正在出售</p>
+                            </div>
+                        </div>
+                    </c:if>
+                </c:if>
+            </c:forEach>
+        </div>
+        <div class="container">
+            共 <span class="badge">${goodslist.totalPageNumber }</span> 页
+            &nbsp;&nbsp;
+            当前第 <span class="badge">${goodslist.pageNo } </span> 页
+            &nbsp;&nbsp;
+
+            <c:if test="${goodslist.hasPrev }">
+                <a class="btn btn-default" role = "button" href="homeServlet?method=getgoods&pageNo=1">首页</a>
+                &nbsp;&nbsp;
+                <a class="btn btn-default" role = "button" href="homeServlet?method=getgoods&pageNo=${goodslist.prevPage }">上一页</a>
+            </c:if>
+
+            &nbsp;&nbsp;
+
+            <c:if test="${goodslist.hasNext }">
+                <a class="btn btn-default" role = "button" href="homeServlet?method=getgoods&pageNo=${goodslist.nextPage }">下一页</a>
+                &nbsp;&nbsp;
+                <a class="btn btn-default" role = "button" href="homeServlet?method=getgoods&pageNo=${goodslist.totalPageNumber }">末页</a>
+            </c:if>
+
+            &nbsp;&nbsp;
+
+            转到 <input  type="text" size="1" id="pageNo"  data-dismiss="alert" aria-label="Close"/> 页
+        </div>
     </div>
 </div>
 <%@ include file="/commons/footer.jsp" %>

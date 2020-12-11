@@ -6,6 +6,7 @@ import com.li.ers.dao.IMineDAO;
 import com.li.ers.dao.impl.AdminDAO;
 import com.li.ers.dao.impl.MineDAO;
 import com.li.ers.model.Goods;
+import com.li.ers.model.User;
 
 import java.util.List;
 
@@ -26,5 +27,11 @@ public class AdminService {
     public void refusegos(int goodsid) {
         String sql = "delete from goods where goodsid=?";
         mineDAO.deletegoods(sql,goodsid);
+    }
+
+    public List<User> getUser() {
+        String sql = "select * from user";
+        List<User> userList = adminDAO.getuser(sql);
+        return userList;
     }
 }

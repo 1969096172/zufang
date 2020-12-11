@@ -1,18 +1,18 @@
 package com.li.ers.web;
 
-public class CriteriaComputer {
+public class CriteriaGoods {
 	//封装查询条件的CriteriaComputer类
 	private float minPrice = 0;
 	private float maxPrice = Integer.MAX_VALUE;
 	private int pageNo;
 	
-	public CriteriaComputer(float minPrice, float maxPrice, int pageNo) {
+	public CriteriaGoods(float minPrice, float maxPrice, int pageNo) {
 		super();
 		this.minPrice = minPrice;
 		this.maxPrice = maxPrice;
 		this.pageNo = pageNo;
 	}
-	
+
 	public float getMinPrice() {
 		return minPrice;
 	}

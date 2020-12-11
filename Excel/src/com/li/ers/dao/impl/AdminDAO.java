@@ -3,6 +3,7 @@ package com.li.ers.dao.impl;
 import com.li.ers.dao.IAdminDAO;
 import com.li.ers.db.DBershou;
 import com.li.ers.model.Goods;
+import com.li.ers.model.User;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -69,5 +70,33 @@ public class AdminDAO implements IAdminDAO {
         }finally {
             DBershou.release(connection);
         }
+    }
+
+    @Override
+    public List<User> getuser(String sql) {
+        Connection connection = null;
+        PreparedStatement preparedStatement = null;
+        ResultSet resultSet = null;
+        try {
+            connection = DBershou.getConnection();
+            preparedStatement = connection.prepareStatement(sql);
+            resultSet = preparedStatement.executeQuery();
+            List<User> users = new ArrayList<>();
+            while (resultSet.next()){
+                User user = new User();
+                user.setUserid(resultSet.getInt("userid"));
+                user.setUsername(resultSet.getString("username"));
+                users.add(user);
+            }
+            resultSet.close();
+            preparedStatement.close();
+            connection.close();
+            return users;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }finally {
+            DBershou.release(connection);
+        }
+        return null;
     }
 }
