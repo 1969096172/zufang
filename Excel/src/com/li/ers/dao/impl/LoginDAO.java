@@ -8,7 +8,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
-public class LoginDAOImpl implements ILoginDAO {
+public class LoginDAO implements ILoginDAO {
     @Override
     public int user_login_in(String sql, String useraccount, String userpassword) {
         Connection connection = null;

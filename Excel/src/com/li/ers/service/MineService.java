@@ -73,4 +73,9 @@ public class MineService {
         String sql = "update goods set status=? where goodsid=?";
         mineDAO.changestaute0(sql,goodsid);
     }
+
+    public void ccstor(int goodsid) {
+        String sql = "update orders set orderstate=1 where goodsid=?";
+        mineDAO.chang(sql,goodsid);
+    }
 }

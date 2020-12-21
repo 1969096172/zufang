@@ -1,11 +1,10 @@
 package com.li.ers.service;
 
 import com.li.ers.dao.ILoginDAO;
-import com.li.ers.dao.impl.LoginDAOImpl;
-import com.li.ers.model.User;
+import com.li.ers.dao.impl.LoginDAO;
 
 public class LoginSevice {
-    ILoginDAO logindao = new LoginDAOImpl();
+    ILoginDAO logindao = new LoginDAO();
     public int login_in(String useraccount, String userpassword){
         String sql = "select * from user where username = ? and userpassword = ?";
 

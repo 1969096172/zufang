@@ -277,6 +277,7 @@ public class MineServelet extends HttpServlet {
 
         mineService.changestate(goodsid);
         mineService.changemoney(userid,goodsmoney);
+        mineService.ccstor(goodsid);
         setminerelgoods(request,response);
     }
     protected void refusegoods(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{

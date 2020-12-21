@@ -26,6 +26,7 @@
     %>
 
 </c:if>
+<%--获取头--%>
 <%@ include file="/commons/header.jsp" %>
 <div id="container">
     <form action="${pageContext.request.contextPath }/homeServlet?method=getgoods" method="post">

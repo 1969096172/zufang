@@ -1,0 +1,19 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="fangbeike:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/fangbeike_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="fangbeike/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="fangbeike" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="lib" />
+          <element id="library" level="project" name="lib1" />
+        </element>
+      </element>
+      <element id="library" level="project" name="lib" />
+      <element id="library" level="project" name="lib1" />
+    </root>
+  </artifact>
+</component>

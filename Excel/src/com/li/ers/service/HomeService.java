@@ -1,7 +1,7 @@
 package com.li.ers.service;
 
-import com.li.ers.dao.HomegoodsDAO;
-import com.li.ers.dao.impl.HomegoodsDAOImpl;
+import com.li.ers.dao.IHomegoodsDAO;
+import com.li.ers.dao.impl.HomegoodsDAO;
 import com.li.ers.model.Goods;
 import com.li.ers.model.User;
 import com.li.ers.web.CriteriaGoods;
@@ -11,7 +11,7 @@ import java.util.List;
 
 public class HomeService {
 
-    private HomegoodsDAO homegoodsDAO = new HomegoodsDAOImpl();
+    private IHomegoodsDAO homegoodsDAO = new HomegoodsDAO();
 
     public Page<Goods> getPage(CriteriaGoods cc){
         return homegoodsDAO.getPage(cc);

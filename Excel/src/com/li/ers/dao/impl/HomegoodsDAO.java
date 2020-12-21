@@ -1,6 +1,6 @@
 package com.li.ers.dao.impl;
 
-import com.li.ers.dao.HomegoodsDAO;
+import com.li.ers.dao.IHomegoodsDAO;
 import com.li.ers.db.DBershou;
 import com.li.ers.model.Goods;
 import com.li.ers.model.User;
@@ -13,21 +13,21 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
 
-public class HomegoodsDAOImpl<T> extends BaseDAO<Goods> implements HomegoodsDAO {
+public class HomegoodsDAO<T> extends BaseDAO<Goods> implements IHomegoodsDAO {
 
     @Override
     public Page<Goods> getPage(CriteriaGoods cc) {
         // TODO Auto-generated method stub
         Page<Goods> page = new Page<>(cc.getPageNo());
 
-        page.setTotalItemNumber(getTotalComputerNumber(cc));
+        page.setTotalItemNumber(getTotalGoodsNumber(cc));
         //校验pageNo的合法性
         cc.setPageNo(page.getPageNo());
         page.setList(getPageList(cc, 6));
         return page;
     }
     @Override
-    public long getTotalComputerNumber(CriteriaGoods cc) {
+    public long getTotalGoodsNumber(CriteriaGoods cc) {
         // TODO Auto-generated method stub
         String sql = "SELECT count(goodsid) FROM goods WHERE newprice BETWEEN ? AND ?";
         return getSingleVal(sql, cc.getMinPrice(), cc.getMaxPrice());

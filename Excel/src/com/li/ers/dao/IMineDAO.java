@@ -26,4 +26,6 @@ public interface IMineDAO {
     void deletegoods(String sql, int goodsid);
 
     void changestaute0(String sql, int goodsid);
+
+    void chang(String sql, int goodsid);
 }

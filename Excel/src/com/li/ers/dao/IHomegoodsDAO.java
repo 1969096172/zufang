@@ -7,14 +7,14 @@ import com.li.ers.web.Page;
 
 import java.util.List;
 
-public interface HomegoodsDAO {
+public interface IHomegoodsDAO {
     /**
      *
      * @return
      */
     Page<Goods> getPage(CriteriaGoods cc);
 
-    long getTotalComputerNumber(CriteriaGoods cc);
+    long getTotalGoodsNumber(CriteriaGoods cc);
 
     List<Goods> getPageList(CriteriaGoods cc, int pageSize);
 
